@@ -60,8 +60,8 @@ def seed_data():
 
 def movie_list(request):
 
-    seed_data()   # 🔥 IMPORTANT
-
+    #seed_data()   # 🔥 IMPORTANT
+    # create_admin() 
     movies = Movie.objects.all()
     genres = Genre.objects.all()
 
