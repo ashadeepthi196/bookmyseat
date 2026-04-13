@@ -6,7 +6,13 @@ from django.db.models import Sum, Count
 from django.core.mail import send_mail
 from django.conf import settings
 import razorpay
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
+@api_view(['GET'])
+def movies_api(request):
+    movies = Movie.objects.all().values()
+    return Response(list(movies))
 
 # 0===============================
 # AUTO RELEASE EXPIRED SEATS

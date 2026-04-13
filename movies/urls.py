@@ -26,4 +26,6 @@ urlpatterns = [
     #Success page
     path('success/',views.success,name='success'),
      
+
+     path('api/', views.movies_api, name='movies_api'),
 ]
