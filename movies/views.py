@@ -68,7 +68,7 @@ def movie_list(request):
     print("VIEW CALLED")  # debug
 
     # seed data once (optional)
-    seed_data()
+
 
     movies = Movie.objects.all()
     genres = Genre.objects.all()
