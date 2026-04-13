@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 from movies.admin import custom_admin_site
+from django.contrib import admin
 
 urlpatterns = [
 
@@ -28,6 +29,7 @@ urlpatterns = [
     # Success page
     path('success/', views.success, name='success'),
 
-    # Custom Admin
-    path('admin/', custom_admin_site.urls),
+
+
+path('admin/', admin.site.urls),
 ]
